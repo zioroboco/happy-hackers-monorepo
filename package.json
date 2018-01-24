@@ -1,0 +1,7 @@
+{
+  "repository": "git@github.com:zioroboco/happy-hackers-monorepo.git",
+  "private": true,
+  "scripts": {},
+  "dependencies": {},
+  "workspaces": ["packages/*"]
+}
