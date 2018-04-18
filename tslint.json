@@ -1,0 +1,10 @@
+{
+  "extends": ["tslint:latest", "tslint-config-prettier"],
+  "rules": {
+    "typedef": [true, "call-signature"],
+    "no-unnecessary-type-assertion": true,
+    "only-arrow-functions": true,
+    "no-parameter-reassignment": true,
+    "no-var-keyword": true
+  }
+}
