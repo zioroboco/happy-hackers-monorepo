@@ -6,8 +6,10 @@
   - [`yarn test [--coverage]`](#yarn-test-coverage)
   - [`yarn lint`](#yarn-lint)
   - [`yarn typecheck`](#yarn-typecheck)
-- [VSCode tasks](#vscode-tasks)
-  - [Build (lint and typecheck)](#build-lint-and-typecheck)
+- [VSCode](#vscode)
+  - [Setup](#setup)
+  - [Tasks](#tasks)
+  - [Debugging](#debugging)
 - [How-to...](#how-to)
   - [Add additional workspaces](#add-additional-workspaces)
 
@@ -27,13 +29,29 @@ Run [TSLint](https://palantir.github.io/tslint/) on all workspaces. TSLint is co
 
 Typecheck all workspaces containing a `tsconfig.json` file.
 
-## VSCode tasks
+## VSCode
 
-### Build (lint and typecheck)
+### Setup
+
+- [Install VSCode](https://code.visualstudio.com/)
+
+- Open the project and let VSCode install recommended extensions
+
+- Open `View > Command Palette` and run `Shell Command: Install 'code' command in PATH`
+
+> **Tip:** Always run VSCode from a terminal, as it will pick up your working directory and environment variables.
+
+### Tasks
+
+**Build: lint and typecheck**
 
 The default build task in VSCode is set to run all non-style-related static checks against the entire project, parse the output, and show any failures in the Problems view.
 
-Note that the default shorcut for running build tasks is `Meta-Shift-B`.
+### Debugging
+
+**Jest**
+
+This will run Jest project-wide while attached to its node process, and stop on any breakpoints encountered both in the spec files or the code under test. This is an excellent way to debug, as it sets up your code under known conditions and allows for mocking of dependencies.
 
 ## How-to...
 
