@@ -1,5 +1,7 @@
 # A Happy Hacker's Monorepo
 
+An uncomplicated Typescript boilerplate for single-project monorepos. Opinionated and fun to work with. Uses [Yarn Workspaces](https://yarnpkg.com/lang/en/docs/workspaces/), [GitLab CI](https://about.gitlab.com/features/gitlab-ci-cd/), [TSLint](https://palantir.github.io/tslint/), [Prettier](https://prettier.io/), [Jest](https://facebook.github.io/jest/), [WallabyJS](https://wallabyjs.com/) and [VSCode](https://code.visualstudio.com/).
+
 <!-- TOC depthFrom:2 -->
 
 - [Package scripts](#package-scripts)
@@ -12,7 +14,7 @@
   - [Tasks](#tasks)
   - [Debugging](#debugging)
 - [How-to...](#how-to)
-  - [Add additional workspaces](#add-additional-workspaces)
+  - [Set up workspaces](#set-up-workspaces)
 
 <!-- /TOC -->
 
@@ -24,11 +26,11 @@ Run the entire static analysis and testing pipeline, including the Typescript co
 
 ### `yarn test [--coverage]`
 
-Run all `*.spec.ts` files project-wide using [Jest](https://facebook.github.io/jest/). Adding the `--coverage` option will output a coverage report to the CLI, as well as producing an HTML report in `/coverage/`.
+Run all `*.spec.ts` files project-wide using Jest. Adding the `--coverage` option will output a coverage report to the CLI, as well as producing an HTML report in `/coverage/`.
 
 ### `yarn lint`
 
-Run [TSLint](https://palantir.github.io/tslint/) on all workspaces. TSLint is configured to only consider non-style-related rules, with formatting being handled by [Prettier](https://prettier.io).
+Run TSLint on all workspaces. TSLint is configured to only consider non-style-related rules, with formatting being handled by Prettier.
 
 ### `yarn typecheck`
 
@@ -60,7 +62,7 @@ This will run Jest project-wide while attached to its node process, and stop on 
 
 ## How-to...
 
-### Add additional workspaces
+### Set up workspaces
 
 - Create a new directory under `/packages/`
 - Add a `package.json` with name `@happy-hackers-monorepo/<workspace-name>`
