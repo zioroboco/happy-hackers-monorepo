@@ -2,7 +2,10 @@
   "repository": "git@github.com:zioroboco/happy-hackers-monorepo.git",
   "private": true,
   "scripts": {
+    "precommit": "yarn static-ci && yarn test-ci",
+    "static-ci": "yarn typecheck && yarn lint && yarn prettier-ci",
     "test": "jest",
+    "test-ci": "yarn test --coverage --ci --maxWorkers=2",
     "lint": "tslint --project .",
     "prettier-ci": "prettier --list-different 'packages/*/src/**/*.{ts,js}'",
     "typecheck-project": "tsc --noEmit --project",

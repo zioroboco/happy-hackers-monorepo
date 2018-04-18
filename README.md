@@ -3,6 +3,7 @@
 <!-- TOC depthFrom:2 -->
 
 - [Package scripts](#package-scripts)
+  - [`yarn precommit`](#yarn-precommit)
   - [`yarn test [--coverage]`](#yarn-test-coverage)
   - [`yarn lint`](#yarn-lint)
   - [`yarn typecheck`](#yarn-typecheck)
@@ -16,6 +17,10 @@
 <!-- /TOC -->
 
 ## Package scripts
+
+### `yarn precommit`
+
+Run the entire static analysis and testing pipeline, including the Typescript compiler, TSLint, Prettier and Jest. Should ensure that your branch will pass CI, provided that the working tree is clean.
 
 ### `yarn test [--coverage]`
 

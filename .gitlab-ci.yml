@@ -1,0 +1,17 @@
+image: node:8
+
+before_script:
+  - yarn install --pure-lockfile
+
+stages:
+  - test
+
+static:
+  stage: test
+  script:
+    - yarn static-ci
+
+test:
+  stage: test
+  script:
+    - yarn test-ci
