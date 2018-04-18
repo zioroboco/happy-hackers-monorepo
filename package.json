@@ -1,7 +1,16 @@
 {
   "repository": "git@github.com:zioroboco/happy-hackers-monorepo.git",
   "private": true,
-  "scripts": {},
-  "dependencies": {},
-  "workspaces": ["packages/*"]
+  "scripts": {
+    "typecheck-project": "tsc --noEmit --project",
+    "foreach-tsconfig": "glob-exec --foreach 'packages/*/tsconfig.json'",
+    "typecheck": "yarn foreach-tsconfig 'yarn typecheck-project {{file.dir}}'"
+  },
+  "dependencies": {
+    "glob-exec": "^0.1.1",
+    "typescript": "^2.8.1"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
 }

@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "lib": ["es6"],
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "target": "es5",
+    "sourceMap": true,
+    "strict": true,
+    "noImplicitAny": false,
+    "baseUrl": ".",
+    "paths": {
+      "@happy-hackers-monorepo/*": ["packages/*/src"]
+    }
+  }
+}
