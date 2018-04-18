@@ -1,0 +1,21 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "lint and typecheck",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "never"
+      },
+      "isBackground": true,
+      "type": "shell",
+      "command":
+        "yarn lint --force --config .vscode/tslint.warn.json; yarn typecheck || true",
+      "problemMatcher": ["$tslint5", "$tsc"]
+    }
+  ]
+}
